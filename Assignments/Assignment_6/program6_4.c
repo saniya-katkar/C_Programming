@@ -1,0 +1,40 @@
+//////////////////////////////////////
+// 
+// Function Name : CheckTriangle
+// Description : To check whether a valid traingle can be formed or not
+// Input : Integer,Integer,Integer
+// Output : String
+// Author : Saniya Sopan Katkar
+// Date : 23/10/26
+//
+///////////////////////////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void CheckTriangle(int iSide1, int iSide2, int iSide3)
+{
+    if((iSide1 > 0) && (iSide2 > 0 )&& (iSide3 > 0 )&&
+       (iSide1 + iSide2 > iSide3) &&
+       (iSide1 + iSide3 > iSide2 )&&
+       (iSide2 + iSide3 > iSide1))
+    {
+        printf("Valid Triangle\n");
+    }
+    else
+    {
+        printf("Invalid Triangle\n");
+    }
+}
+
+int main()
+{
+    int iSide1 = 0, iSide2 = 0, iSide3 = 0;
+
+    printf("Enter three sides: ");
+    scanf("%d %d %d", &iSide1, &iSide2, &iSide3);
+
+    CheckTriangle(iSide1, iSide2, iSide3);
+
+    return EXIT_SUCCESS;
+}
